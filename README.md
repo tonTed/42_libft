@@ -18,7 +18,7 @@
 - [x] ft_isdigit
 - [x] ft_isalnum
 - [x] ft_isascii
-- [ ] ft_isprint
+- [x] ft_isprint
 - [ ] ft_toupper
 - [ ] ft_tolower
 - [ ] ft_strchr

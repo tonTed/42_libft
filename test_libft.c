@@ -50,6 +50,11 @@ void	test_ft_isascii(void)
 	func_test_ascii(&ft_isascii, &isascii, 200);
 }
 
+void	test_ft_isprint(void)
+{
+	func_test_ascii(&ft_isprint, &isprint, 128);
+}
+
 int 	main(void)
 {
 	UNITY_BEGIN();
@@ -58,4 +63,5 @@ int 	main(void)
 	RUN_TEST(test_ft_isdigit);
 	RUN_TEST(test_ft_isalnum);
 	RUN_TEST(test_ft_isascii);
+	RUN_TEST(test_ft_isprint);
 }
