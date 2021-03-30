@@ -1,5 +1,5 @@
 
-int 	ft_isdigit(int _c)
+int 	ft_isdigit(int c)
 {
-	return (_c >= '0' && _c <= '9') ? 1 : 0;
+	return (c >= '0' && c <= '9') ? 1 : 0;
 }
