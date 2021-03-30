@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
+unsigned long		ft_strlen(const char *s)
 {
-	int i;
+	unsigned long i;
 
 	i = 0;
 	while (s[i])
