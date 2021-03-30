@@ -14,8 +14,8 @@
 - [ ] ft_memchr
 - [ ] ft_memcmp
 - [x] ft_strlen
-- [ ] ft_isalpha
-- [ ] ft_isdigit
+- [x] ft_isalpha
+- [x] ft_isdigit
 - [ ] ft_isalnum
 - [ ] ft_isascii
 - [ ] ft_isprint
