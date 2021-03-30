@@ -55,6 +55,11 @@ void	test_ft_isprint(void)
 	func_test_ascii(&ft_isprint, &isprint, 128);
 }
 
+void	test_ft_toupper(void)
+{
+	func_test_ascii(&ft_toupper, &toupper, 128);
+}
+
 int 	main(void)
 {
 	UNITY_BEGIN();
@@ -64,4 +69,5 @@ int 	main(void)
 	RUN_TEST(test_ft_isalnum);
 	RUN_TEST(test_ft_isascii);
 	RUN_TEST(test_ft_isprint);
+	RUN_TEST(test_ft_toupper);
 }

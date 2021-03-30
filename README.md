@@ -19,7 +19,7 @@
 - [x] ft_isalnum
 - [x] ft_isascii
 - [x] ft_isprint
-- [ ] ft_toupper
+- [x] ft_toupper
 - [ ] ft_tolower
 - [ ] ft_strchr
 - [ ] ft_strrchr
