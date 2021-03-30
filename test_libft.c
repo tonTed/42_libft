@@ -3,13 +3,14 @@
 #include <ctype.h>
 #include "./includes/header.h"
 
+#include <stdio.h>
+
 char 	*s1 = "Ecole 42";
 char 	*s2 = "";
 
-void 	func_test_ascii(int (*ft)(int), int (*f)(int ))
+void 	func_test_ascii(int (*ft)(int), int (*f)(int ), int i)
 {
-	int i = -1;
-	while (++i <= 127)
+	while (--i >= 0)
 		TEST_ASSERT(ft(i) == f(i));
 }
 
@@ -31,17 +32,22 @@ void	test_ft_strlen(void)
 
 void	test_ft_isalpha(void)
 {
-	func_test_ascii(&ft_isalpha, &isalpha);
+	func_test_ascii(&ft_isalpha, &isalpha, 128);
 }
 
 void	test_ft_isdigit(void)
 {
-	func_test_ascii(&ft_isalpha, &isalpha);
+	func_test_ascii(&ft_isalpha, &isalpha, 128);
 }
 
 void	test_ft_isalnum(void)
 {
-	func_test_ascii(&ft_isalnum, &isalnum);
+	func_test_ascii(&ft_isalnum, &isalnum, 128);
+}
+
+void	test_ft_isascii(void)
+{
+	func_test_ascii(&ft_isascii, &isascii, 200);
 }
 
 int 	main(void)
@@ -51,4 +57,5 @@ int 	main(void)
 	RUN_TEST(test_ft_isalpha);
 	RUN_TEST(test_ft_isdigit);
 	RUN_TEST(test_ft_isalnum);
+	RUN_TEST(test_ft_isascii);
 }
