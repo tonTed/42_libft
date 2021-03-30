@@ -8,12 +8,6 @@
 char 	*s1 = "Ecole 42";
 char 	*s2 = "";
 
-void 	func_test_ascii(int (*ft)(int), int (*f)(int ), int i)
-{
-	while (--i >= 0)
-		TEST_ASSERT(ft(i) == f(i));
-}
-
 void	setUp(void )
 // run before each test
 {
@@ -23,6 +17,12 @@ void	tearDown(void)
 // run after each test
 {
 };
+
+void 	func_test_ascii(int (*ft)(int), int (*f)(int ), int i)
+{
+	while (--i >= 0)
+		TEST_ASSERT(ft(i) == f(i));
+}
 
 void	test_ft_strlen(void)
 {
@@ -60,6 +60,11 @@ void	test_ft_toupper(void)
 	func_test_ascii(&ft_toupper, &toupper, 128);
 }
 
+void	test_ft_tolower(void)
+{
+	func_test_ascii(&ft_tolower, &tolower, 128);
+}
+
 int 	main(void)
 {
 	UNITY_BEGIN();
@@ -70,4 +75,5 @@ int 	main(void)
 	RUN_TEST(test_ft_isascii);
 	RUN_TEST(test_ft_isprint);
 	RUN_TEST(test_ft_toupper);
+	RUN_TEST(test_ft_tolower);
 }

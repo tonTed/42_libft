@@ -15,11 +15,10 @@ NAME		= libft.a
 CFLAGS		= -Wall -Wextra -Werror
 CC			= gcc
 
-
 SRC			= $(wildcard ./src/*.c)
-
 OBJS		= $(SRC:.c=.o)
 
+#TODO - files .o in folder obj
 
 # Color
 BLACK := "\e[0;30m"
