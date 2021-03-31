@@ -48,9 +48,9 @@ fclean		: clean
 
 re			: fclean all
 
-test		: re
+test		: all
 				@printf ${YELLOW}"[TEST] $(NAME) start\n"${RESET}
-				@$(CC) $(CFLAGS) test_libft.c ../Unity/src/unity.c -L. -lft && ./a.out && RM a.out
+				@$(CC) test_libft.c ../Unity/src/unity.c -L. -lft && ./a.out && RM a.out
 				@printf ${BLUE}"[TEST] $(NAME) finish\n"${RESET}
 
 .PHONY		: all clean 

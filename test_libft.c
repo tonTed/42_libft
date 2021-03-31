@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+//#define RAND_MAX 127
 
 char 	*s_empty		= "";
 char 	*s_42			= "School 42";
@@ -27,6 +28,7 @@ char** 	start()
 	s_tab[5] = s_sp_finish ;
 	s_tab[6] = s_same ;
 
+	printf("%d\n", RAND_MAX);
 	return s_tab;
 }
 
@@ -46,7 +48,7 @@ void 	func_test_ascii(int (*ft)(int), int (*f)(int), int i)
 
 void	test_ft_strlen(void)
 {
-	int i = 0;
+	int i = -1;
 	while (++i < len_tab)
 		TEST_ASSERT(ft_strlen(s_tab[i]) == strlen(s_tab[i]));
 }
@@ -86,6 +88,17 @@ void	test_ft_tolower(void)
 	func_test_ascii(&ft_tolower, &tolower, 128);
 }
 
+void	test_ft_strchr(void)
+{
+	int i = -1;
+	while (++i < len_tab)
+	{
+		int r = rand() % 128;
+		printf("%d - %c\n", r, r);
+		TEST_ASSERT(ft_strchr(s_tab[i], r) == strchr(s_tab[i], r));
+	}
+}
+
 int 	main(void)
 {
 	start();
@@ -99,6 +112,7 @@ int 	main(void)
 	RUN_TEST(test_ft_isprint);
 	RUN_TEST(test_ft_toupper);
 	RUN_TEST(test_ft_tolower);
+	RUN_TEST(test_ft_strchr);
 
 	free(s_tab);
 }
