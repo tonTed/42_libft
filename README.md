@@ -20,7 +20,7 @@
 - [x] ft_isascii
 - [x] ft_isprint
 - [x] ft_toupper
-- [ ] ft_tolower
+- [x] ft_tolower
 - [ ] ft_strchr
 - [ ] ft_strrchr
 - [ ] ft_strncmp
